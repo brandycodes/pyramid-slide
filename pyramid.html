@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        body {
+            font-family: "Courier New", monospace;
+            text-align: center;
+            background-color: #fafafa;
+        }
+
+        header {
+            background-color: #A95587;
+            font-size: 40px;
+            color: #cccccc;
+            font-weight: bolder;
+            padding: 30px;
+        }
+
+        #content {
+            font-size: 20px;
+            margin: 30px 5%;
+            background-color: #eeeeee;
+            border: 2px solid #A95587;
+            border-radius: 6px;
+        }
+
+        #theform {
+            font-size: 20px;
+            color: black;
+            background-color: #cccccc;
+            padding: 10px 0px;
+        }
+
+        #showheight {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        #pyramid {
+            line-height: 0;
+            font-size: 30px;
+            color: #A95587;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Pyramid Slide</header>
+    <div id="content">
+        <div id="theform"
+        <form id="draw-form">
+            <label>Brick symbol:
+                <select id="brick" onchange="symboldropdown(this.value)" option="#" />
+                    <option value="#">#</option>
+                    <option value="@">@</option>
+                    <option value="X">X</option>
+                    <option value="$">$</option>
+                </select>
+            </label>
+            <label>How high?
+                <input type="range" name="height" id="height" min="1" max="20" oninput="heightslider(this.value)" value="2" />
+                <span id="showheight"></span>
+            </label> 
+        </form>
+        </div>
+        <div id="pyramid"></div>
+    </div>
+
+    <script src="pyramid.js"></script>
+</body>
+</html>
